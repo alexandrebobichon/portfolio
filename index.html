@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/tablette.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body id="body">
+    <header>
+        <div class="borderMain"></div>
+
+        <!-- <nav class="headerNav">
+            <ul>
+                <li><a href="#compBody">Compétence</a></li>
+                <li><a href="#experienceBody">Expérience</a></li>
+                <li><a href="#formationBody">Formations</a></li>
+                <li><a href="#passionBody">Passion</a></li>
+                <li><a href="#contactBody">Contact</a></li>
+            </ul>
+        </nav> -->
+
+        <div class="wrapper">
+            <!-- CANVAS background header -->
+            <canvas id="canvas"></canvas>
+            <section id="canvasActiveAction" class="sectionWrapper">
+                <h1>
+                    <div class="border">
+                        <div class="borderContainer">
+                            <p>Alexandre Bobichon</p>
+                            <p>Développeur informatique Web & Mobile</p>
+                        </div>
+                    </div>
+                </h1>
+            </section>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="borderMain"></div>
+
+        <!-- modal display on card click event -->
+        <div id="modal" class="modalDisplay">
+            <i id="close" class="close fa-solid fa-circle-xmark"></i>
+
+            <i class="arrow left fa-solid fa-circle-arrow-left"></i>
+            <i class="arrow rigth fa-solid fa-circle-arrow-right"></i>
+
+            <!-- hidden section before display-->
+
+            <section id="comp">
+                <div></div>
+            </section>
+            <section id="formation">
+                <div></div>
+            </section>
+            <section id="experience">
+                <div></div>
+            </section>
+            <section id="passion">
+                <div></div>
+            </section>
+            <section id="contact">
+                <div></div>
+            </section>
+        </div>
+
+
+        <!-- btn for display modal -->
+        <section class="container">
+            <section id="compBody" onclick="card.CardDisplayOnClick('comp', this);">
+                <h2 class="hTriang">Compétence</h2>
+            </section>
+            <section id="experienceBody" onclick="card.CardDisplayOnClick('experience', this);">
+                <h2 class="hTriang">Expérience</h2>
+            </section>
+            <section id="formationBody" onclick="card.CardDisplayOnClick('formation',this);">
+                <h2 class="hTriang">Formations</h2>
+            </section>
+            <section id="passionBody" onclick="card.CardDisplayOnClick('passion', this);">
+                <h2 class="hTriang">Passion</h2>
+
+            </section>
+            <section id="contactBody" onclick="card.CardDisplayOnClick('contact', this);">
+                <h2 class="hTriang">Contact</h2>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <!-- JSON LINK -->
+        <script type="text/javascript" src="./json/competence.js"></script>
+        <script type="text/javascript" src="./json/contact.js"></script>
+        <script type="text/javascript" src="./json/experience.js"></script>
+        <script type="text/javascript" src="./json/formation.js"></script>
+        <script type="text/javascript" src="./json/passion.js"></script>
+
+        <!-- js class -->
+        <script type="text/javascript" src="./script/class/competence.js"></script>
+        <script type="text/javascript" src="./script/class/contact.js"></script>
+        <script type="text/javascript" src="./script/class/experience.js"></script>
+        <script type="text/javascript" src="./script/class/formation.js"></script>
+        <script type="text/javascript" src="./script/class/passion.js"></script>
+        <script type="text/javascript" src="./script/class/canvas/animationCanvas.js"></script>
+        <script type="text/javascript" src="./script/class/canvas/particle.js"></script>
+        <script type="text/javascript" src="./script/class/card/cardClass.js"></script>
+        <script type="text/javascript" src="./script/class/card/carrouselClass.js"></script>
+        <!-- <script type="text/javascript" src="./script/class/card/cardBtn.js"></script> -->
+
+        <!-- js script -->
+        <script type="text/javascript" src="./script/service/service.js"></script>
+        <script type="text/javascript" src="./script/service/animation.js"></script>
+        <script type="text/javascript" src="./script/service/canvas.js"></script>
+
+        <!-- INDEX -->
+        <script type="text/javascript" src="./script/index.js"></script>
+
+    </footer>
+
+
+</body>
+
+</html>

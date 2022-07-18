@@ -1,0 +1,390 @@
+/**
+* ANIMATION
+*/
+
+@keyframes slideDown {
+    from {
+        top: -80%;
+    }
+    to {
+        top: 30%;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 30%;
+    }
+    to {
+        top: -80%;
+    }
+}
+
+@keyframes turn360 {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes turnM360 {
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+
+/**
+* GLOBAL
+*/
+
+*,
+html {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgba(92, 92, 93, 1);
+}
+
+
+/**
+* <ANIMATION>
+*/
+
+
+/**
+* </ANIMATION>
+*/
+
+
+/**
+* <HEADER>
+*/
+
+header .border {
+    padding: 5px;
+    animation-duration: 10s;
+    animation-name: borderAround;
+    animation-iteration-count: infinite;
+}
+
+header .borderContainer {
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+}
+
+header h1 {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+
+/** Nav */
+
+
+/* .headerNav {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(96, 226, 109, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.headerNav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.headerNav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.headerNav ul li a {
+    width: 100%;
+    padding: 25px 0;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.headerNav ul li:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+} */
+
+
+/** wrapper */
+
+.wrapper {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.sectionWrapper {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+/** canvas */
+
+#canvas {
+    position: absolute;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 299px;
+    background-color: black;
+}
+
+
+/**
+* </HEADER>
+*/
+
+
+/**
+* <MAIN>
+*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12vh;
+}
+
+.container section {
+    margin: 20px 0;
+    height: 200px;
+    width: 200px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: -1px 0px 15px 1px rgba(0, 0, 0, 0.34);
+    box-shadow: -1px 0px 15px 1px rgba(0, 0, 0, 0.34);
+}
+
+.container section:hover {
+    cursor: pointer;
+}
+
+.container section h2 {
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#compBody {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/card/competence.png');
+    background-color: #5CE173;
+}
+
+#experienceBody {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/card/experience.png');
+    background-color: #3FDD9F;
+}
+
+#formationBody {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/card/formation.png');
+    background-color: #2FDBB8;
+}
+
+#passionBody {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/card/passion.png');
+    background-color: #1FD9D0;
+}
+
+#contactBody {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/card/contact.png');
+    background-color: #11D6E5;
+}
+
+#compBody,
+#experienceBody,
+#formationBody,
+#passionBody,
+#contactBody {
+    background-size: 7.5rem;
+    background-position: center;
+}
+
+.ulTheme {
+    margin: 20px 0;
+    display: none;
+}
+
+.ulTheme p,
+.ulTheme li {
+    color: black;
+}
+
+.borderMain {
+    /* width: 100%; */
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(96, 226, 109, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    padding: 2px;
+}
+
+
+/** modal */
+
+.modalDisplay {
+    background-color: rgba(0, 0, 0, 0);
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    z-index: 9999999;
+    display: none;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border-width: 2px;
+    background: radial-gradient(circle at left top, #60e26d, #00d4ff);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+#comp,
+#formation,
+#experience,
+#passion,
+#contact {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+#formation p:first-child,
+#experience p:first-child,
+#passion p:first-child,
+#contact p:first-child,
+#comp p:first-child {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+#formation a p:first-child,
+#experience a p:first-child,
+#passion a p:first-child,
+#contact a p:first-child,
+#comp a p:first-child {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#formation ul li,
+#experience ul li,
+#passion ul li,
+#contact ul li,
+#comp ul li {
+    padding-left: 10px;
+}
+
+#experience ul:last-child,
+#passion ul:last-child,
+#contact ul:last-child,
+#comp ul:last-child {
+    display: flex;
+}
+
+#comp img,
+#formation img,
+#experience img,
+#passion img,
+#contact img {
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cardSec {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* animation card class */
+
+.modalDown {
+    animation: 0.5s slideDown 1;
+}
+
+.modalUp {
+    animation: 0.5s slideUp 1;
+}
+
+.cardTurnRigth {
+    animation: 0.3s turn360 1;
+}
+
+.cardTurnLeft {
+    animation: 0.3s turnM360 1;
+}
+
+.arrow {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.close {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+    cursor: pointer;
+}
+
+.rigth {
+    right: 0%;
+}
+
+.left {
+    left: 10%;
+}
+
+
+/**
+*</MAIN>
+*/
