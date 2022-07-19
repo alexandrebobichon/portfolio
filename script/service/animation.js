@@ -12,11 +12,10 @@ function animationGradient() {
     const backgroundSetup = (color1, color2, pourcentage1, pourcentage2) => {
         return `
             background: linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
-            background: -moz-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% ); /* FF 3.6+ */  
-            background: -ms-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% ); /* IE10 */  
-            background: -webkit-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% ); /* Safari 4+, Chrome 2+ */  
-            background: -webkit-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% ); /* Safari 5.1+, Chrome 10+ */  
-            background: -o-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% ); /* Opera 11.10 */  
+            background: -webkit-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background: -moz-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background: -o-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background: linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
         `
     };
 
