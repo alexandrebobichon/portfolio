@@ -55,6 +55,9 @@
                 height: 125px;
                 width: 125px;
             }
+            .cardSec {
+                width: 60%;
+            }
             @keyframes slideDown {}
             @keyframes slideUp {}
             @keyframes turn360 {}
