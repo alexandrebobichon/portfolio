@@ -39,6 +39,11 @@ const contactsJSON = `{
                 "ifont":"links",
                 "type":"Linkedin",
                 "info":"https://fr.linkedin.com/in/alexandre-bobichon"
+            },            {
+                "logo": "${pathContact}cv.png",
+                "ifont":"links",
+                "type":"CV",
+                "info":"${pathContact}CV-AlexandreBobichon.pdf"
             }
         ]
     }`;

@@ -56,9 +56,10 @@ function SetInCard(dataToShow, body) {
                     body.appendChild(section1);
                 } else {
                     let a = document.createElement('a');
-                    bal.innerText = elem;
-                    if (elem.includes('https:')) {
-                        a.href = elem;
+                    bal.innerText = elem.includes('./assets/imgContact/') ? elem.split('/')[3] : elem;;
+
+                    if (elem.includes('https:') || elem.includes('./assets/imgContact/')) {
+                        a.href = elem
                         a.target = '_blank';
                         a.appendChild(bal);
                         section2.appendChild(a);

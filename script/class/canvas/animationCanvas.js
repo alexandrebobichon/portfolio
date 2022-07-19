@@ -49,15 +49,16 @@ class AnimationCanvas {
     }
 
     animate = () => {
+        if (window.innerWidth >= 600) {
+            this.requestId = false;
+            this.start(loop());
 
-        this.requestId = false;
-        this.start(loop());
+            this.fix_dpi();
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            for (let i = 0; i < this.particles.length; i++) {
 
-        this.fix_dpi();
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        for (let i = 0; i < this.particles.length; i++) {
-
-            this.particles[i].move();
+                this.particles[i].move();
+            }
         }
     }
 }

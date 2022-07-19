@@ -54,6 +54,6 @@ window.addEventListener('load', function() {
     animationGradient();
 
     /* canvas header */
-    animation.animate();
+    if (window.innerWidth > 600) animation.animate();
 
 });
