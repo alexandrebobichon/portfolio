@@ -40,6 +40,21 @@
             header h1 {
                 font-size: 20px;
             }
+            main {
+                padding-top: 15vh;
+            }
+            #compBody,
+            #experienceBody,
+            #formationBody,
+            #passionBody,
+            #contactBody {
+                background-size: 3.5rem;
+                background-position: center;
+            }
+            .container section {
+                height: 125px;
+                width: 125px;
+            }
             @keyframes slideDown {}
             @keyframes slideUp {}
             @keyframes turn360 {}
