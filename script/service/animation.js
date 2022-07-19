@@ -10,7 +10,13 @@ function animationGradient() {
     //Set the animation
     const keyFrames = (animation) => { return `@-webkit-keyframes borderAround {  ${animation} }` };
     const backgroundSetup = (color1, color2, pourcentage1, pourcentage2) => {
-        return `background: linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );`
+        return `
+            background: linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background: -webkit-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background:-moz-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background:-o-linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+            background:   linear-gradient(90deg, ${color1} ${pourcentage1}% , ${color2} ${pourcentage2}% );
+        `
     };
 
     let animation = '';
