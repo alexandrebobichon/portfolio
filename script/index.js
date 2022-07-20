@@ -57,6 +57,12 @@ window.addEventListener('load', function() {
     if (window.innerWidth > 600) animation.animate();
 
     // Lock mobile screen
-    screen.orientation.lock(); // webkit only
-    screen.lockOrientation("orientation");
+    window.screen.orientation
+        .lock("portrait")
+        .then(
+            success => console.log(success),
+            failure => console.log(failure)
+        )
+
+    alert('coucou');
 });
