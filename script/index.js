@@ -56,4 +56,7 @@ window.addEventListener('load', function() {
     /* canvas header */
     if (window.innerWidth > 600) animation.animate();
 
+    // Lock mobile screen
+    screen.orientation.lock(); // webkit only
+    screen.lockOrientation("orientation");
 });
