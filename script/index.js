@@ -55,14 +55,4 @@ window.addEventListener('load', function() {
 
     /* canvas header */
     if (window.innerWidth > 600) animation.animate();
-
-    // Lock mobile screen
-    window.screen.orientation
-        .lock("portrait")
-        .then(
-            success => console.log(success),
-            failure => console.log(failure)
-        )
-
-    alert('coucou');
 });
